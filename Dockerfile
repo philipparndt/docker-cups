@@ -21,8 +21,13 @@ ENV TERM xterm
 # Set workdir
 WORKDIR /opt/cups
 
+
 # Install CUPS/AVAHI
 RUN apk update --no-cache && apk add --no-cache cups cups-filters avahi inotify-tools
+
+# Install gutenprint
+RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+RUN apk add gutenprint gutenprint-cups ghostscript
 
 # Copy configuration files
 COPY root /
