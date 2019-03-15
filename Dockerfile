@@ -19,7 +19,9 @@ RUN apt-get update && apt-get install -y \
   hp-ppd \
   hplip \
   printer-driver-gutenprint \
-  avahi
+  avahi-daemon \
+  avahi-discover \
+  libnss-mdns
 
 RUN sed -i "s/^#\ \+\(en_US.UTF-8\)/\1/" /etc/locale.gen \
   && locale-gen en_US en_US.UTF-8
