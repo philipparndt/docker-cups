@@ -47,8 +47,8 @@ RUN useradd \
 
 # Copy configuration files
 #COPY root /
-COPY etc/cups/cupsd.conf /etc/cups/cupsd.conf
-COPY etc/cups/printers.conf /etc/cups/printers.conf
+COPY etc-cups/cupsd.conf /etc/cups/cupsd.conf
+COPY etc-cups/printers.conf /etc/cups/printers.conf
 
 # Prepare CUPS container
 RUN chmod 755 /srv/run.sh
