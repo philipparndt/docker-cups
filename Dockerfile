@@ -63,4 +63,5 @@ EXPOSE 631/tcp
 EXPOSE 5353/udp
 
 # Start CUPS instance
-CMD ["/srv/run.sh"]
+# CMD ["/srv/run.sh"]
+ENTRYPOINT ["/usr/sbin/cupsd", "-f"]
